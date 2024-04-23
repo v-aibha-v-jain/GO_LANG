@@ -98,4 +98,66 @@ func main(){
 	fmt.Printf("\nprintfValB value : %v, type : %T",printfValB,printfValB)
 	fmt.Printf("\n%%g : %g", 3.145298492484294849849249)
 
+	arrayfunc()
+
+	operators(2.5,6.8,"+")
+
+}
+
+
+func arrayfunc(){
+
+	// array with length declared
+	var arrLDeclared = [15]int{1,2,3,4,5}
+	fmt.Println(arrLDeclared)
+
+	// array with out length declared
+	var arrLUndeclared = [...]int{1,2,3,4,5}
+	fmt.Println(arrLUndeclared)
+
+	//array not initialilzed
+	var arrNotInit [5]int
+	fmt.Println("Array Not Initialized : ",arrNotInit)
+
+	//accessing elements of an array
+	fmt.Println("\nAccessing Elements Of An Array")
+	for i := 0; i < len(arrLUndeclared);i++ {
+		fmt.Println("Element at index ",i," is : ",arrLUndeclared[i])
+	}
+
+	//initialize specific elements
+	arrSI := [10]int{2:3,5:6}
+	fmt.Println("Specific Elements Initialization : ",arrSI)
+
+	//len(array_variable) gives the length of array
+	//cap(array_variable) gives the capacity of array
+	//slicing can done same as the other langs like python java
+	//capacity of a sliced array will be equal to cap(original_array)endIndex - lower index of slicing arg
+	// we can change the cap by using this syntax slice_name := make([]type, length, capacity)
+
+	myslice1 := []int{1,2,3}
+	myslice2 := []int{4,5,6}
+	myslice3 := append(myslice1, myslice2...)
+	fmt.Printf("slicing and merging arrays : %v", myslice3)
+
+}
+
+
+func operators(op1, op2 float64, op string){
+	switch op{
+		case "+":
+			fmt.Printf("%v", op1+op2)
+
+		case "-":
+			fmt.Printf("%v", op1+op2)
+
+		case "*":
+			fmt.Printf("%v", op1+op2)
+
+		case "/":
+			fmt.Printf("%v", op1+op2)
+
+		case "%":
+			fmt.Printf("%v", op1+op2)
+	}
 }
