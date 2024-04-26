@@ -56,7 +56,41 @@ import ("fmt")
 /////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////// FUNTIONS //////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
-// main funtion just like c c++ and java
+/* 
+	main funtion just like c c++ and java
+	parameters for a funtion : func funcname(arg1,arg2 datatype, arg3 datatype)
+	if the func wants to return some obj or value, syntax : func funcName(args) returnType{}
+	we can also declare the variable that has to be returned, syntax : (variable datatype), and just use return keywork at the last statement of the func
+	this method of declaring variable supports multiple return, (varibale1 type1, var2 type2) and a return keywork at the end
+*/
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////// CONDITIONAL / SWITCH / LOOP STATEMENTS ///////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/*
+	if else statement is the same as in C
+	after if condition, when we add a else part it should be right next to the closing brace of if block
+
+	we can put mmultiple cases in a single block ex : case 1,2,3:
+
+	we don't need to write statements/conditions in () in for loop
+	for iterating a array or list, syntax : for index, element := range array {}
+	when index is not required, syntax : for _, element := range array {}
+	when elements are not required, syntax : for index, _ := range array {}
+*/
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////// BASIC FUNTIONS ///////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/*
+	len(iterable variable) gives then length in back
+	'_' this  character represents blank identifier. 
+	It’s commonly used in loops where you don’t care about the actual value but want to iterate over something.
+	It works on arrays, slices, and even on funtions that returns multiple objs or values
+	For a recursive funtion same logic works as other langs
+*/
 
 
 func main(){
@@ -147,17 +181,27 @@ func operators(op1, op2 float64, op string){
 	switch op{
 		case "+":
 			fmt.Printf("%v", op1+op2)
-
 		case "-":
 			fmt.Printf("%v", op1+op2)
-
 		case "*":
 			fmt.Printf("%v", op1+op2)
-
 		case "/":
 			fmt.Printf("%v", op1+op2)
-
 		case "%":
 			fmt.Printf("%v", op1+op2)
+		case "^":
+			fmt.Printf("%v", int(op1) ^ int(op2))
+		case "==":
+			fmt.Printf("%v", op1 == op2)
+		case "!=":
+			fmt.Printf("%v", op1 != op2)
+		case ">":
+			fmt.Printf("%v", op1>op2)
+		case "<":
+			fmt.Printf("%v", op1<op2)
+		case ">=":
+			fmt.Printf("%v", op1>=op2)
+		case "<=":
+			fmt.Printf("%v", op1<=op2)
 	}
 }
