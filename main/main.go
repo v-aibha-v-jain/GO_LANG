@@ -5,5 +5,5 @@ import (
 )
 
 func main(){
-    basic.basic()
+    basic.Basic()
 }
