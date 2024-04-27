@@ -109,7 +109,7 @@ type stud struct{
 }
 
 
-func basic(){
+func Basic(){
 
 	fmt.Println("\nhello - fmt.Println")
 
